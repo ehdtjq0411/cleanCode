@@ -1,0 +1,86 @@
+클린코드 스터디 숙제
+
+
+2. 의도를 분명히 하라
+- Before
+int d = endDate - startDate;
+
+- After
+int dayGap = endDate - startDate;
+
+
+3. 그릇된 정보와 혼동을 피하라
+실제로는 List가 아닌 Map
+- Before
+Map<String, Account> accountList = new HashMap<>();
+
+- After
+Map<String, Account> accountMap = new HashMap<>();
+
+
+4. 의미 있게 구분하고 일관된 어휘를 유지하라
+- Before
+String userData1;
+String userData2;
+
+- After
+String userInputData;
+String processedUserData;
+
+
+5. 발음하기 쉽고 검색 가능한 이름을 써라
+- Before
+int i = 5;
+int e = total / 2;
+
+- After
+int workDaysPerWeek = 5;
+int averageUserCount = totalUserCount / 2;
+
+
+6. 인코딩과 불필요한 접두어를 피하라
+- Before
+String strUserName;
+int nUserAge;
+
+- After
+String userName;
+int userAge;
+
+
+7. 명사와 동사의 구분
+메서드 이름에 명사 사용
+- Before
+public void loanInfo() { ... }
+
+- After
+메서드는 동사형
+public void saveLoanInfo() { ... }
+
+
+8. 맥락을 부여하고 불필요한 맥락은 제거하라
+같은 동작인데 메서드마다 다른 단어 사용
+- Before
+LoanAplcVo loanAplcSave(LoanAplcVo inVo);
+LoanAplcVo loanAplcHistoryReg(LoanAplcVo inVo);
+
+- After
+LoanAplcVo loanAplcSave(LoanAplcVo inVo);
+LoanAplcVo loanAplcHistorySave(LoanAplcVo inVo);
+
+
+9. 기발함보다 명료함을 택하라
+- Before
+int calcVal;
+
+- After
+int calculateValue;
+
+
+10. 해법 영역과 문제 영역의 균형
+변수들이 어떤 데이터인지 알기 어려움
+- Before
+String state;
+
+- After
+String loanState;
